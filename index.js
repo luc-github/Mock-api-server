@@ -6,11 +6,18 @@ const morgan = require('morgan');
 const routes = require('./routes')
 
 const app = express();
+/**multer */
+/* // upload file path
+const FILE_PATH = 'uploads';
 
+// configure multer
+const upload = multer({
+    dest: `${FILE_PATH}/`
+}); */
 // enable files upload
-app.use(fileUpload({
-    createParentPath: true
-}));
+// app.use(fileUpload({
+//     createParentPath: true
+// }));
 
 //add other middleware
 app.use(cors());
